@@ -1,0 +1,7 @@
+{
+  "name": "CompaneroDeRuta",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
