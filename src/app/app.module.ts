@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ReactiveFormsModule } from '@angular/forms';
 import { SuccessModalComponent } from './success-modal/success-modal.component';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { SuccessModalComponent } from './success-modal/success-modal.component';
     ReactiveFormsModule, // Importa ReactiveFormsModule para formularios reactivos
   ],
   providers: [
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    provideAnimationsAsync()
   ],
   bootstrap: [AppComponent],
 })

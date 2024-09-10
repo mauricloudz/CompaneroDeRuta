@@ -53,4 +53,8 @@ export class LoginPage {
   register() {
     alert('Función de registro no implementada.');
   }
+
+  navigateToRegister() {
+    this.router.navigate(['register']);
+  }
 }

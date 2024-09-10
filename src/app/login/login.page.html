@@ -14,6 +14,8 @@
       <ion-label position="floating">Contraseña</ion-label>
       <ion-input type="password" formControlName="password" required></ion-input>
     </ion-item>
-    <ion-button expand="full" type="submit" [disabled]="!loginForm.valid">Ingresar</ion-button>
+    <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Ingresar</button>
+    
   </form>
+  <button mat-raised-button color="accent" (click)="navigateToRegister()">Registrarse</button>
 </ion-content>
