@@ -33,6 +33,10 @@ export class LoginPage {
     this.router.navigate(['register']);
   }
 
+  navigateToRecover() {
+    this.router.navigate(['recover']);
+  }
+
   async onSubmit() {
     if (this.loginForm.valid) {
       await this.showSuccessModal();

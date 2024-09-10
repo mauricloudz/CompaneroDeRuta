@@ -25,12 +25,13 @@ export class RegisterPage {
   }
   
   onSubmit() {
+    console.log('Form Valid:', this.registerForm.valid);
     if (this.registerForm.valid) {
       console.log('Registration successful', this.registerForm.value);
       this.router.navigate(['login']);
     }
   }
-
+  
   navigateToLogin() {
     this.router.navigate(['login']);
   }
