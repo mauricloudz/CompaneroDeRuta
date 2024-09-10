@@ -1,12 +1,14 @@
+// recover.module.ts
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
+import { MatButtonModule } from '@angular/material/button';
+import { MatDialogModule } from '@angular/material/dialog'; // Importa MatDialogModule
 
 import { RecoverPageRoutingModule } from './recover-routing.module';
-import { MatButtonModule } from '@angular/material/button';
 import { RecoverPage } from './recover.page';
+import { RecoverySuccessDialogComponent } from '../recovery-success-dialog/recovery-success-dialog.component'; // Importa el componente
 
 @NgModule({
   imports: [
@@ -15,8 +17,9 @@ import { RecoverPage } from './recover.page';
     IonicModule,
     RecoverPageRoutingModule,
     ReactiveFormsModule,
-    MatButtonModule
+    MatButtonModule,
+    MatDialogModule // Asegúrate de importar MatDialogModule
   ],
-  declarations: [RecoverPage]
+  declarations: [RecoverPage, RecoverySuccessDialogComponent] // Declara el componente
 })
 export class RecoverPageModule {}
