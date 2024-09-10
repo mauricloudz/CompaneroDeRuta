@@ -7,16 +7,13 @@
 <ion-content>
   <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">Correo Electrónico</ion-label>
-      <ion-input type="email" formControlName="email" required></ion-input>
+      <ion-input label="Correo Electrónico" labelPlacement="stacked" type="email" formControlName="email" required placeholder="usuario@duocuc.cl" matTooltip="Introduce tu correo electrónico DUOC"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" formControlName="password" required></ion-input>
+      <ion-input label="Contraseña" labelPlacement="stacked" type="password" formControlName="password" required placeholder="Ingresa una contraseña" matTooltip="Debe contener 4 numeros, 3 caracteres, 1 mayuscula"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Confirmar Contraseña</ion-label>
-      <ion-input type="password" formControlName="confirmPassword" required></ion-input>
+      <ion-input label="Confirmar Contraseña" labelPlacement="stacked" type="password" formControlName="confirmPassword" required placeholder="Vuelve a ingresar la contraseña" matTooltip="Debe contener 4 numeros, 3 caracteres, 1 mayuscula"></ion-input>
     </ion-item>
     <button mat-raised-button color="primary" type="submit" [disabled]="!registerForm.valid">Registrarse</button>
     <button mat-raised-button color="warn" (click)="navigateToLogin()">Volver al Login</button>

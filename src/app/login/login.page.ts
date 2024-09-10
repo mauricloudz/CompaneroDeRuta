@@ -29,14 +29,18 @@ export class LoginPage {
     });
   }
 
+  navigateToRegister() {
+    this.router.navigate(['register']);
+  }
+
   async onSubmit() {
     if (this.loginForm.valid) {
+      await this.showSuccessModal();
       const navigationExtras: NavigationExtras = {
         state: {
           user: this.loginForm.value.username
         }
       };
-      await this.showSuccessModal();
       this.router.navigate(['home'], navigationExtras);
     }
   }
@@ -47,14 +51,8 @@ export class LoginPage {
       cssClass: 'my-custom-class',
       animated: true
     });
-    return await modal.present();
+    await modal.present();
+    await modal.onDidDismiss(); // Esperamos el cierre del modal.
   }
 
-  register() {
-    alert('Función de registro no implementada.');
-  }
-
-  navigateToRegister() {
-    this.router.navigate(['register']);
-  }
 }

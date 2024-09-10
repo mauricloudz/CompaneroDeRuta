@@ -8,6 +8,8 @@ import { RegisterPageRoutingModule } from './register-routing.module';
 
 import { RegisterPage } from './register.page';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
+
 
 
 @NgModule({
@@ -16,7 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     IonicModule,
     RegisterPageRoutingModule,
-    MatButtonModule
+    MatButtonModule,
+    MatTooltipModule
   ],
   declarations: [RegisterPage]
 })

@@ -8,6 +8,7 @@ import { LoginPageRoutingModule } from './login-routing.module';
 
 import { LoginPage } from './login.page';
 import { MatButtonModule } from '@angular/material/button';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MatButtonModule } from '@angular/material/button';
     ReactiveFormsModule,
     IonicModule,
     LoginPageRoutingModule,
-    MatButtonModule 
+    MatButtonModule,
+    MatTooltipModule
   ],
   declarations: [LoginPage]
 })

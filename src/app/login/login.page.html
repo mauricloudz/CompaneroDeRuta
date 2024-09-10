@@ -7,12 +7,10 @@
 <ion-content>
   <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <ion-item>
-      <ion-label position="floating">Usuario</ion-label>
-      <ion-input type="text" formControlName="username" required></ion-input>
+      <ion-input label="Correo Electrónico" labelPlacement="stacked" type="email" formControlName="username" placeholder="usuario@duocuc.cl" matTooltip="Introduce tu correo electrónico DUOC"></ion-input>
     </ion-item>
     <ion-item>
-      <ion-label position="floating">Contraseña</ion-label>
-      <ion-input type="password" formControlName="password" required></ion-input>
+      <ion-input label="Contraseña" labelPlacement="stacked" type="password" formControlName="password" placeholder="Mínimo 8 caracteres" matTooltip="Debe contener 4 numeros, 3 caracteres, 1 mayuscula" required></ion-input>
     </ion-item>
     <button mat-raised-button color="primary" type="submit" [disabled]="!loginForm.valid">Ingresar</button>
     
